@@ -1,0 +1,9 @@
+
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+/* Disattiva light - dark basata su OS */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Colore body light - dark  */
+body { @apply  bg-gray-100 dark:bg-gray-800; }

@@ -1,0 +1,32 @@
+
+
+<nav class="mx-auto mt-5 mb-14 w-5/6 max-w-80 rounded-lg border border-gray-200 bg-white p-4 font-medium shadow-md dark:border-gray-700 dark:bg-gray-900" >
+  
+  <ul class="flex items-center justify-between gap-2">
+    <li>
+      <a routerLink="login" class="block cursor-pointer rounded-md bg-gray-100 p-2 text-gray-900 transition-all hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"> Login</a>
+    </li>
+    <li>
+      <a routerLink="tasks" class="block cursor-pointer rounded-md bg-gray-100 p-2 text-gray-900 transition-all hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">Tasks</a >
+    </li>
+    <li>
+      <button type="button" (click)="logOut()" 
+      class="block cursor-pointer rounded-md bg-gray-100 p-2 text-gray-900 transition-all hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+      > Logout
+      </button>
+    </li>
+    <li>
+      <button type="button" (click)="changeMode()"
+        class="block cursor-pointer rounded-md bg-gray-100 p-2 transition-all hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600"
+      >
+        @if (!darkMode()) {
+          <app-icons [icon]="'moon'"></app-icons>
+        } @else {
+          <app-icons [icon]="'sun'"></app-icons>
+        }
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
